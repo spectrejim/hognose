@@ -25,7 +25,7 @@ SECRET_KEY = '-fp@%lpx3xp@9o9vn4i@x6pdp+mpuan@y0$x-zm75^4k!b7g27'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-54-89-55-138.compute-1.amazonaws.com','localhost']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+'rest_framework',]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -118,3 +118,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+]
