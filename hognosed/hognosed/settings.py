@@ -25,7 +25,7 @@ SECRET_KEY = '-fp@%lpx3xp@9o9vn4i@x6pdp+mpuan@y0$x-zm75^4k!b7g27'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-54-89-55-138.compute-1.amazonaws.com','localhost']
+ALLOWED_HOSTS = ['ec2-54-89-55-138.compute-1.amazonaws.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-'rest_framework',]
+    'rest_framework',
+    'api',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,4 +124,4 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
-]
+}
