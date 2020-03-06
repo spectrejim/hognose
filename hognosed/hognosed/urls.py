@@ -21,7 +21,7 @@ from api import views
 
 
 urlpatterns = [
-#    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     re_path(r'^api-auth/', include('rest_framework.urls')),
 
