@@ -3,7 +3,7 @@ from . import models
 
 class ScenarioSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
-		fields = ('name', 'maps', 'overlays', 'sides', 'location', 'time', 'source', 'front',)
+		fields = ('name', 'overlays',)
 		model = models.Scenario
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
