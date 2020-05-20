@@ -11,7 +11,7 @@ def get():
     returns a JSON object that can then be POSTed to the API.
     '''
     try:
-        response = requests.get('https://jsonplaceholder.typicode.com/albums',)
+        response = requests.get('file:///Users/scottshafer/Downloads/CSV-ASL.txt',)
     except Exception as e:
         print(e)
         return {}

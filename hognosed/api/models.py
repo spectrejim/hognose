@@ -5,13 +5,7 @@ import time
 # Create your models here.
 class Scenario(models.Model):
     name = models.TextField(max_length=255)
-    maps = models.CharField(max_length=255,blank=True)
     overlays = models.CharField(max_length=255,blank=True)
-    sides = models.TextField(max_length=255)
-    location = models.TextField(max_length=255)
-    time = models.CharField(max_length=64)
-    source = models.TextField(max_length=255)
-    front = models.TextField(max_length=255)
 
     def __str__(self):
         return str(self.name.title())
